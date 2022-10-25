@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html >
+<head>
+    <meta charset="UTF-8">
+    <title>ML Deployment using Heroku</title>
+    <link href='https://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Arimo' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Hind:300' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300' rel='stylesheet' type='text/css'>
+</head>
+
+<body>
+    <div class="prediction">
+        <h1>Income Prediction</h1>
+        <form action="{{ url_for('predict')}}"method="post">
+            u, g, r, i, z, spec_obj_ID, redshift, plate, MJD
+            <br>
+    		    <label for="u"> </label>
+    		    <input type="text" id="capital-gain" name="capital-gain" required="required">btw:[0-99999]
+    		<br>
+
+
+        	<button type="submit" class="btn btn-primary btn-block btn-large">Predict</button>
+        </form>
+       <br>
+       <b>{{ prediction_text }}</b>
+    </div>
+</body>
+</html>
