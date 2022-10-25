@@ -49,7 +49,7 @@ def predicao(u, g, r, i, z, spec_obj_ID, redshift, plate, MJD):
 
 text1, img, info = predicao(u, g, r, i, z, spec_obj_ID, redshift, plate, MJD)
 
-if st.button("Predict"): 
+if st.button("Verificar"): 
     st.success('Objeto detectado: {}\n'.format(text1))
     image = Image.open(img)
     st.image(image)
